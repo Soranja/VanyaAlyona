@@ -1,0 +1,19 @@
+.place__website-heading {
+    line-height: 20.4px;
+    font-size: 12px;
+    font-weight: 400; 
+    letter-spacing: 2px;
+    color: #AAAAAA;
+
+    margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+    .place__website-heading {
+        line-height: 12px;
+    } 
+}
+@media (max-width: 690px) {
+    .place__website-heading {
+        margin-bottom: 12px;
+    } 
+}

@@ -1,0 +1,20 @@
+.lang__lang-link {
+    margin: 18px 18px 6px 0;
+
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    
+}
+.lang__lang-link:last-child {
+    margin-right: 0;
+}
+@media (max-width: 690px) {
+    .lang__lang-link {
+        margin: 14px 18px 8px 0;
+
+        line-height: 20px;
+        font-size: 18px;
+    } 
+ }

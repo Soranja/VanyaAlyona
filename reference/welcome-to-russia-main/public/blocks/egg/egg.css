@@ -1,0 +1,7 @@
+.egg {
+    display: flex;
+    flex-direction: column;
+    
+    width: 850px;
+    margin: 0 auto;
+}

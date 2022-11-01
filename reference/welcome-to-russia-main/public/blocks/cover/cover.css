@@ -1,0 +1,31 @@
+.cover {
+    margin: 92px -100px 0;
+    height: 740px;
+    position: relative;
+            
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.cover>:hover ~ .cover__overlay {
+    opacity: 0.8;
+}
+@media (max-width: 1024px) {
+    .cover {
+        margin: 92px -48px 0;
+        height: 640px;
+    } 
+}
+@media (max-width: 768px) {
+    .cover {
+        margin: 90px -24px 0;
+        height: 480px;
+    } 
+}
+@media (max-width: 440px) {
+    .cover {
+        margin: 66px -16px 0;
+        height: 300px;
+    } 
+}
