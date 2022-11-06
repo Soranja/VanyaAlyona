@@ -125,17 +125,25 @@ a:visited {
     justify-items: start;
     justify-content: center;
 
- }
+}
 
 .imgs-grid__item {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border: solid 5px #fff;
-    
- }
+    filter: drop-shadow(0px 0px 0px #222);
+    transition: transform 0.5s, filter 0.3s;
+}
 
- #img2017 {
+#img2017 {
     object-position: 30% 10%;
 
- }
+}
+
+.imgs-grid__item:hover {
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px #222);
+    transform: scale(1.2);
+    z-index: 1;
+}
