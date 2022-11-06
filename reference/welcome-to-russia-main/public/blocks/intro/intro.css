@@ -1,0 +1,18 @@
+.intro {
+    padding-top: 92px;
+    width: 690px;
+
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 768px) {
+    .intro {
+        width: 100%;
+        padding-top: 88px;
+    } 
+}
+@media (max-width: 690px) {
+    .intro {
+        padding-top: 64px;
+    } 
+}

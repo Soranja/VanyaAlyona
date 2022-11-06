@@ -1,0 +1,13 @@
+.place__text {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 690px) {
+    .place__text {
+        margin-bottom: 50px;
+    }
+    .place__text:last-child {
+        margin-bottom: 0;
+    }
+
+}

@@ -1,0 +1,23 @@
+.page {
+    max-width: 984px;
+    margin: 0 auto;
+    padding: 0 148px 0;
+}
+@media (max-width: 1024px) {
+   .page {
+       max-width: 928px;
+       padding: 0 48px 0;
+   } 
+}
+@media (max-width: 768px) {
+    .page {
+        max-width: 720px;
+        padding: 0 24px 0;
+    } 
+} 
+@media (max-width: 400px) {
+    .page {
+        max-width: 288px;
+        padding: 0 16px 0;
+    } 
+}

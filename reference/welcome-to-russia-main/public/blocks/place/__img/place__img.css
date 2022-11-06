@@ -1,0 +1,21 @@
+.place__img {
+    object-fit: contain;
+    width: 100%;
+}
+@media (max-width: 1024px) {
+    .place__img {
+        width: 100%;
+    } 
+}
+@media (max-width: 768px) {
+    .place__img {
+        width: 100%;
+    } 
+}
+@media (max-width: 690px) {
+    .place__img {
+        width: 100%;
+        margin: 0 -16px 32px;
+        align-self: center;
+    } 
+}
