@@ -1,0 +1,54 @@
+body {
+    background: #346a66;
+    font-family: 'Press Start 2P', cursive;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+#main_2014 {
+    object-position: 0 0;
+}
+
+#main_2016 {
+    object-position: 0 0;
+}
+
+.hide-btn {
+    background: #00bfe1;
+}
+
+.hide-btn:hover {
+    background: #0086bb;
+}
+
+
+.pop-up-gallery {}
+
+.img-container {
+    padding: 30px 30px 10px 30px;
+    margin: 0 60px 0 60px;
+}
+
+.img-container img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.prev-btn {}
+
+.fas {}
+
+.fa-chevron-left {}
+
+.next-btn {}
+
+.fa-chevron-right {}
+
+.year-info {}
+
+.hide-btn {}

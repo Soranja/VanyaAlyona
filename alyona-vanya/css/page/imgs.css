@@ -1,0 +1,39 @@
+.imgs-grid {
+    padding-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 300px);
+    /* grid-template-columns: repeat(8, 1fr); */
+    /* justify-items: center; */
+    justify-content: center;
+}
+
+/* how to center the grid??
+
+/* .imgs-grid img {
+    grid-column: span 2;
+}
+
+.imgs-grid img:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+}
+
+.imgs-grid img:last-child:nth-child(3n + 1) {
+    grid-column-end: 4;
+} */
+
+.imgs-grid__item {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: solid 5px #fff;
+    filter: drop-shadow(0px 0px 0px #222);
+    transition: transform 0.5s, filter 0.3s;
+}
+
+.imgs-grid__item:hover {
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px #222);
+    transform: scale(1.2);
+    z-index: 5;
+}

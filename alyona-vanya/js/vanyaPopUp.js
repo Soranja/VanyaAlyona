@@ -1,4 +1,3 @@
-// текст для поп-апов
 const popupTexts = [{
     img: './img/vanya-page/vania_2013.jpg',
     h3: '2013',
@@ -53,51 +52,94 @@ const popupTexts = [{
 ];
 
 const popup = document.querySelector('.pop-up-bg');
-const hideBtn = document.querySelector('.hideBtn');
+const hideBtn = document.querySelector('.hide-btn');
 const popupBody = document.querySelector('.pop-up-body');
 const imgs = [...document.querySelectorAll('.imgs-grid__item')];
 
 const popupTextsIndexes = Object.keys(popupTexts);
 const imgsIndexes = Object.keys(imgs);
 
+const addContent = function () {
 
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            popup.classList.add('show-pop');
+            imgs[i].style.zIndex = '0';
 
-imgs.forEach(function (item) {
-    item.addEventListener('click', function () {
-        popup.classList.add('show-pop');
-        item.style.zIndex = '0';
+            const popupMain = document.querySelector('.pop-up');
+            popupMain.style.height = 'auto';
 
-        const popupMain = document.querySelector('.pop-up');
-        popupMain.style.height = 'auto';
+            const img = document.createElement('img');
+            const h3 = document.createElement('h3');
+            const h4 = document.createElement('h4');
+            const text = document.createElement('p');
 
-        const img = document.createElement('img');
-        const h3 = document.createElement('h3');
-        const h4 = document.createElement('h4');
-        const text = document.createElement('p');
+            if (popupTextsIndexes[imgs.indexOf(imgs[i])] === imgsIndexes[imgs.indexOf(imgs[i])]) {
 
-        if (popupTextsIndexes[imgs.indexOf(item)] === imgsIndexes[imgs.indexOf(item)]) {
+                popupBody.appendChild(img);
+                popupBody.appendChild(h3);
+                popupBody.appendChild(h4);
+                popupBody.appendChild(text);
 
-            popupBody.appendChild(img);
-            popupBody.appendChild(h3);
-            popupBody.appendChild(h4);
-            popupBody.appendChild(text);
+                img.setAttribute('src', popupTexts[imgs.indexOf(imgs[i])].img);
+                h3.textContent = `${popupTexts[imgs.indexOf(imgs[i])].h3}`;
+                h4.textContent = `${popupTexts[imgs.indexOf(imgs[i])].h4}`;
+                text.textContent = `${popupTexts[imgs.indexOf(imgs[i])].p}`;
 
-            img.setAttribute('src', popupTexts[imgs.indexOf(item)].img);
-            h3.textContent = `${popupTexts[imgs.indexOf(item)].h3}`;
-            h4.textContent = `${popupTexts[imgs.indexOf(item)].h4}`;
-            text.textContent = `${popupTexts[imgs.indexOf(item)].p}`;
+                hideBtn.addEventListener('click', function () {
+                    popup.classList.remove('show-pop');
+                    setTimeout(() => {
+                        popupBody.replaceChildren();
+                    }, 450);
+                });
+
+            };
 
         };
 
-        hideBtn.addEventListener('click', function () {
-            popup.classList.remove('show-pop');
-            setTimeout(() => {
-                popupBody.removeChild(img);
-                popupBody.removeChild(h3);
-                popupBody.removeChild(h4);
-                popupBody.removeChild(text);
-            }, 450);
-        });
+    };
 
-    });
-});
+};
+
+addContent();
+
+// V 1.0 - removeChild bug on second closing cycle
+// imgs.forEach(function (item) {
+//     item.addEventListener('click', function () {
+//         popup.classList.add('show-pop');
+//         item.style.zIndex = '0';
+
+//         const popupMain = document.querySelector('.pop-up');
+//         popupMain.style.height = 'auto';
+
+//         const img = document.createElement('img');
+//         const h3 = document.createElement('h3');
+//         const h4 = document.createElement('h4');
+//         const text = document.createElement('p');
+
+//         if (popupTextsIndexes[imgs.indexOf(item)] === imgsIndexes[imgs.indexOf(item)]) {
+
+//             popupBody.appendChild(img);
+//             popupBody.appendChild(h3);
+//             popupBody.appendChild(h4);
+//             popupBody.appendChild(text);
+
+//             img.setAttribute('src', popupTexts[imgs.indexOf(item)].img);
+//             h3.textContent = `${popupTexts[imgs.indexOf(item)].h3}`;
+//             h4.textContent = `${popupTexts[imgs.indexOf(item)].h4}`;
+//             text.textContent = `${popupTexts[imgs.indexOf(item)].p}`;
+
+//         };
+
+//         hideBtn.addEventListener('click', function () {
+//             popup.classList.remove('show-pop');
+//             setTimeout(() => {
+//                 popupBody.removeChild(img);
+//                 popupBody.removeChild(h3);
+//                 popupBody.removeChild(h4);
+//                 popupBody.removeChild(text);
+//             }, 450);
+//         });
+
+//     });
+// });

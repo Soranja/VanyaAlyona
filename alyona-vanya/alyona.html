@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/nullcss.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/alyona.css" />
-    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/page-special/alyona.css">
     <title>VanyaAlyona: Alyona!</title>
 </head>
 
@@ -33,7 +32,46 @@
             </ul>
         </div>
     </nav>
+    <main>
+        <section class="imgs-grid">
+            <img src="./img/alyona-page/main/main_2013.jpg" alt="alyona_2013" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2014.jpg" alt="alyona_2014" class="imgs-grid__item" id="main_2014" />
+            <img src="./img/alyona-page/main/main_2015.jpg" alt="alyona_2015" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2016.jpg" alt="alyona_2016" class="imgs-grid__item" id="main_2016" />
+            <img src="./img/alyona-page/main/main_2017.jpg" alt="alyona_2017" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2018.jpg" alt="alyona_2018" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2019.jpg" alt="alyona_2019" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2020.jpg" alt="alyona_2020" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2021.jpg" alt="alyona_2021" class="imgs-grid__item" />
+            <img src="./img/alyona-page/main/main_2022.jpg" alt="alyona_2022" class="imgs-grid__item" />
+        </section>
 
+        <div class="pop-up-bg">
+            <div class="pop-up">
+                <div class="pop-up-body">
+                </div>
+                <button class="hide-btn">Закрыть!</button>
+            </div>
+        </div>
+
+        <div class="pop-up-gallery">
+            <article class="pop-up">
+                <div class="img-container">
+                    <div class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <img src="./img/alyona-page/main/main_2013.jpg" alt="alyona">
+                    <div class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="year-info"></div>
+                <button class="hide-btn">Закрыть!</button>
+            </article>
+        </div>
+
+        <script src="js/alyonaPopUp.js"></script>
+    </main>
 </body>
 
 </html>
