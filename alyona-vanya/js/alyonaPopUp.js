@@ -100,11 +100,42 @@ imgs.forEach(function (item) {
 const popupGallery = [
     {
         year: 2013,
-        img_1: './img/alyona-page/2013/1',
-        img_2: './img/alyona-page/2013/2',
-        img_3: './img/alyona-page/2013/3',
-        img_4: './img/alyona-page/2013/4',
-        img_5: './img/alyona-page/2013/5'
+        imgs: [
+        './img/alyona-page/2013/1.jpg',
+        './img/alyona-page/2013/2.jpg',
+        './img/alyona-page/2013/3.jpg',
+        './img/alyona-page/2013/4.jpg',
+        './img/alyona-page/2013/5.jpg'
+    ]
     }
 ];
 
+const img = document.querySelector('.pop-up_img');
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+let currentItem = 0;
+
+window.addEventListener('DOMContentLoaded', function () {
+    const item = popupGallery[currentItem];
+    img.src = item.imgs[currentItem];
+});
+
+const showPhoto = function (photo) {
+    const item = popupGallery[photo];
+    img.src = item.imgs[photo];
+};
+
+console.log(showPhoto(0));
+
+nextBtn.addEventListener('click', function () {
+    currentItem++;
+    if(currentItem > popupGallery.imgs.length - 1) currentItem = 0;
+    showPhoto(currentItem);
+});
+
+prevBtn.addEventListener('click', function (){
+    currentItem--;
+    if(currentItem < 0) currentItem = popupGallery.imgs.length - 1;
+    showPhoto(currentItem);
+});
