@@ -139,3 +139,5 @@ prevBtn.addEventListener('click', function (){
     if(currentItem < 0) currentItem = popupGallery.imgs.length - 1;
     showPhoto(currentItem);
 });
+
+let a;
