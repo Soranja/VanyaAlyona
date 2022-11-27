@@ -53,6 +53,7 @@
 .pop-up-body p {
     margin: 15px 15px;
     font-weight: 400;
+    text-align: left;
 }
 
 .pop-up-body h3 {

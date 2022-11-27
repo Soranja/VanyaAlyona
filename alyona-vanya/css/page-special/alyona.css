@@ -25,12 +25,9 @@ a:visited {
     background: #0086bb;
 }
 
-
-.pop-up-gallery {}
-
 .img-container {
-    padding: 30px 30px 10px 30px;
-    margin: 0 60px 0 60px;
+    padding: 5px;
+    margin: 20px 60px 0 60px;
 }
 
 .img-container img {
@@ -39,16 +36,17 @@ a:visited {
     border-radius: 10px;
 }
 
-.prev-btn {}
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
 
-.fas {}
+.prev-btn {
+    margin-right: 10px;
+}
 
-.fa-chevron-left {}
-
-.next-btn {}
-
-.fa-chevron-right {}
-
-.year-info {}
-
-.hide-btn {}
+.next-btn {
+    margin-left: 10px;
+}
