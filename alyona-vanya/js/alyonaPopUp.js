@@ -203,12 +203,15 @@ imgs.forEach(function (item) {
             showPhoto(currentItem);
         });
 
-        hideBtn.addEventListener('click', function () {
+        const hide = function () {
             popup.classList.remove('show-pop');
             setTimeout(() => {
                 popupBody.replaceChildren();
             }, 450);
-        });
+        }
+
+        hideBtn.addEventListener('click', hide);
+        // document.body.addEventListener('click', hide);
     });
 });
 
