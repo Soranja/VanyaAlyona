@@ -1,0 +1,11 @@
+body {
+    background: rgb(251, 100, 63);
+    background: radial-gradient(circle, rgba(251, 100, 63, 1) 0%, rgba(198, 0, 40, 1) 100%);
+    font-family: 'Press Start 2P', cursive;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}

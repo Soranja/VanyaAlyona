@@ -70,15 +70,17 @@ a:visited {
     filter: drop-shadow(0px 0px 0px rgb(0, 0, 0));
     padding: 20px;
     z-index: 2;
+    /* opacity: 0.5; */
 }
 
-.column__us img {
+#cat {
     z-index: -1;
-    width: 90px;
+    width: 100px;
     position: relative;
     top: 60px;
     transition: transform 0.5s;
-    transform-origin: bottom;
+    transform-origin: bottom center;
+    transform: translate(0);
 }
 
 .column__us:hover {
@@ -86,10 +88,3 @@ a:visited {
     filter: drop-shadow(5px 5px 0px rgb(0, 0, 0));
 }
 
-
-/*add cat animation! */
-.column__us img:hover {
-    transform: rotate(-45deg) translate(20px, 100px);
-}
-
-;
