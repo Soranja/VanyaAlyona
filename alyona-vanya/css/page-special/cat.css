@@ -1,6 +1,6 @@
 body {
-    background: rgb(251, 100, 63);
-    background: radial-gradient(circle, rgba(251, 100, 63, 1) 0%, rgba(198, 0, 40, 1) 100%);
+    background: rgb(255, 224, 191);
+    background: linear-gradient(241deg, rgba(255, 224, 191, 1) 0%, rgba(255, 156, 0, 1) 36%, rgba(255, 220, 165, 1) 67%, rgba(255, 169, 0, 1) 100%);
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -8,4 +8,39 @@ a,
 a:visited {
     text-decoration: none;
     color: #fff;
+}
+
+
+.nav-img {
+    animation: nav-img 5s normal linear infinite;
+}
+
+@keyframes nav-img {
+    /* 0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    } */
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
