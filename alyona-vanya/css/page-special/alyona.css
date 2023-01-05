@@ -9,11 +9,7 @@ a:visited {
     color: #fff;
 }
 
-#main_2014 {
-    object-position: 0 0;
-}
-
-#main_2016 {
+#main_2014, #main_2016{
     object-position: 0 0;
 }
 
@@ -28,12 +24,15 @@ a:visited {
 .img-container {
     padding: 5px;
     margin: 20px 60px 0 60px;
+    display: flex;
+    justify-content: center;
 }
 
 .img-container img {
-    width: 100%;
+    width: 50%;
     margin-bottom: 15px;
     border-radius: 10px;
+    
 }
 
 .btn-container {
