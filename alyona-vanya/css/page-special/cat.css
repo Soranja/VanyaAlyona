@@ -11,6 +11,7 @@ a:visited {
 }
 
 
+
 .nav-img {
     animation: nav-img 5s normal linear infinite;
 }
@@ -45,33 +46,128 @@ a:visited {
     }
 }
 
-
 .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 750px;
+    box-sizing: content-box;
 }
 
 .window {
     width: 500px;
-    height: 600px;
+    height: 700px;
     padding: 2.5em 3em;
     background-color: #fff;
-    border-radius: 0.6em;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
     margin-bottom: 30px;
+    margin-top: 30px;
 }
-
-.stats-container {}
 
 .game-container {
     position: relative;
     width: 100%;
     display: grid;
+    gap: 0.6em;
+    justify-content: center;
 }
 
-.hide {}
+.stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+}
 
-.controls-container {}
+.card-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.card-before,
+.card-after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-before {
+    background-color: #f4c531;
+    font-size: 2.8em;
+    width: 100px;
+    height: 100px;
+}
+
+.card-after {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card-after img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+    transform: rotateY(0deg);
+}
+
+.controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 224, 191);
+    background: linear-gradient(241deg, rgba(255, 224, 191, 1) 0%, rgba(255, 156, 0, 1) 36%, rgba(255, 220, 165, 1) 67%, rgba(255, 169, 0, 1) 100%);
+    top: 0;
+}
+
+button {
+    border: none;
+    padding: 30px 60px;
+    cursor: pointer;
+}
+
+#stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 50px auto 0 auto;
+    background-color: #000;
+    color: #fff;
+}
+
+.controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+
+.hide {
+    display: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 54px;
+    padding-bottom: 30px;
+}
+
+#result h4 {
+    font-size: 24px;
+    margin: 0.6em 0 1em 0;
+    padding-bottom: 20px;
+}
