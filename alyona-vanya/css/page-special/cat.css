@@ -44,3 +44,34 @@ a:visited {
         transform: rotate(360deg);
     }
 }
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+}
+
+.window {
+    width: 500px;
+    height: 600px;
+    padding: 2.5em 3em;
+    background-color: #fff;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.stats-container {}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+
+.hide {}
+
+.controls-container {}
